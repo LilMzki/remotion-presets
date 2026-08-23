@@ -1,0 +1,77 @@
+name: バグ報告
+description: 再現可能な不具合や予期しない描画を報告します。
+title: '[Bug]: '
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        報告ありがとうございます。セキュリティ上の問題はIssueに書かず、Security Advisoryから非公開で報告してください。
+
+  - type: input
+    id: preset
+    attributes:
+      label: プリセットID
+      description: 問題が起きるプリセットのIDまたは公開API名を入力してください。
+      placeholder: typewriter
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 最小再現コード
+      description: コピーして実行できる最小限のCompositionまたは再現リポジトリを記載してください。
+      render: tsx
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の結果
+      description: エラー、崩れた表示、発生フレームなどを具体的に記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する結果
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: バージョン
+      description: remotion-presets、remotion、React、Node.js、npmの各バージョンを記載してください。
+      placeholder: remotion-presets 0.1.0 / remotion 4.0.515 / React 19.2.8 / Node.js 24.x / npm 11.x
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 実行環境
+      description: OS、ブラウザー、解像度、fps、レンダー方法を記載してください。
+      placeholder: Windows 11 / Chrome / 1920x1080 / 30fps / Remotion CLI
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: ログ・画像・動画
+      description: 機密情報を除いたログや、問題が分かる画像・短い動画を添付してください。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認事項
+      options:
+        - label: 同じ内容の既存Issueがないことを確認しました。
+          required: true
+        - label: すべてのRemotion公式パッケージが同じ完全固定バージョンであることを確認しました。
+          required: true

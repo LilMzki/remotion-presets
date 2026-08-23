@@ -1,0 +1,40 @@
+name: 機能提案
+description: プリセット以外のAPI、開発体験、ドキュメント改善を提案します。
+title: '[Feature]: '
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 課題
+      description: 現在困っていることと、誰が影響を受けるかを記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案
+      description: 望ましい利用方法と振る舞いを記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 検討した代替案
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: 互換性への影響
+      description: 公開API、レンダー結果、Remotion対応範囲に影響があれば記載してください。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認事項
+      options:
+        - label: 同じ内容の既存Issueがないことを確認しました。
+          required: true

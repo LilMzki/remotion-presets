@@ -1,0 +1,73 @@
+name: プリセット提案
+description: 新しい高レベルプリセットや既存プリセットの改善を提案します。
+title: '[Preset]: '
+labels:
+  - enhancement
+  - preset
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: カテゴリ
+      options:
+        - テキスト
+        - アニメーション
+        - エフェクト
+        - トランジション
+        - ルック／複合プリセット
+        - 既存プリセットの改善
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: プリセット名
+      placeholder: Paper Tear Reveal
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: 解決したい編集上の課題
+      description: どのような場面で、利用者が何を簡単にできるようになるかを記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: appearance
+    attributes:
+      label: 見た目と時間変化
+      description: 開始・中間・終了時の見た目を、座標列ではなく編集表現として説明してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: api
+    attributes:
+      label: 想定する高レベルAPI
+      description: 利用者に公開したい意味のある調整項目と既定値を記載してください。
+      placeholder: intensity、direction、durationInFrames、seed
+
+  - type: input
+    id: premiere
+    attributes:
+      label: Premiere対応項目
+      description: 対応するPremiereの効果・トランジションがある場合だけ、正式名称を記載してください。
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考資料
+      description: 権利上共有可能な自作画像、動画、仕様へのリンクを記載してください。Adobeの素材そのものは添付しないでください。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認事項
+      options:
+        - label: 既存プリセットと提案済みIssueを検索しました。
+          required: true
+        - label: 提案内容は生のキーフレーム指定ではなく、再利用可能な高レベル表現です。
+          required: true

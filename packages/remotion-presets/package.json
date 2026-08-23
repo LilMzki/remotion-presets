@@ -1,0 +1,125 @@
+{
+  "name": "remotion-presets",
+  "version": "0.1.0",
+  "description": "Premiere-inspired high-level visual presets for Remotion",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./animations": {
+      "import": {
+        "types": "./dist/animations.d.ts",
+        "default": "./dist/animations.js"
+      },
+      "require": {
+        "types": "./dist/animations.d.cts",
+        "default": "./dist/animations.cjs"
+      }
+    },
+    "./effects": {
+      "import": {
+        "types": "./dist/effects.d.ts",
+        "default": "./dist/effects.js"
+      },
+      "require": {
+        "types": "./dist/effects.d.cts",
+        "default": "./dist/effects.cjs"
+      }
+    },
+    "./looks": {
+      "import": {
+        "types": "./dist/looks.d.ts",
+        "default": "./dist/looks.js"
+      },
+      "require": {
+        "types": "./dist/looks.d.cts",
+        "default": "./dist/looks.cjs"
+      }
+    },
+    "./registry": {
+      "import": {
+        "types": "./dist/registry.d.ts",
+        "default": "./dist/registry.js"
+      },
+      "require": {
+        "types": "./dist/registry.d.cts",
+        "default": "./dist/registry.cjs"
+      }
+    },
+    "./text": {
+      "import": {
+        "types": "./dist/text.d.ts",
+        "default": "./dist/text.js"
+      },
+      "require": {
+        "types": "./dist/text.d.cts",
+        "default": "./dist/text.cjs"
+      }
+    },
+    "./transitions": {
+      "import": {
+        "types": "./dist/transitions.d.ts",
+        "default": "./dist/transitions.js"
+      },
+      "require": {
+        "types": "./dist/transitions.d.cts",
+        "default": "./dist/transitions.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "prepack": "npm run build",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=20.17.0"
+  },
+  "peerDependencies": {
+    "@remotion/transitions": "4.0.515",
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20",
+    "remotion": "4.0.515"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LilMzki/remotion-presets.git",
+    "directory": "packages/remotion-presets"
+  },
+  "bugs": {
+    "url": "https://github.com/LilMzki/remotion-presets/issues"
+  },
+  "homepage": "https://github.com/LilMzki/remotion-presets#readme",
+  "keywords": [
+    "remotion",
+    "react",
+    "video",
+    "animation",
+    "transitions",
+    "effects",
+    "presets"
+  ]
+}

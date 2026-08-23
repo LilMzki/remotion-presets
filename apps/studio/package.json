@@ -1,0 +1,22 @@
+{
+  "name": "@remotion-presets/studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "remotion bundle src/index.ts",
+    "dev": "remotion studio src/index.ts",
+    "render:catalog": "remotion render src/index.ts PresetCatalog ../../out/catalog.mp4",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.515",
+    "@remotion/effects": "4.0.515",
+    "@remotion/media": "4.0.515",
+    "@remotion/transitions": "4.0.515",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.515",
+    "remotion-presets": "0.1.0"
+  }
+}

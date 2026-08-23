@@ -1,0 +1,41 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '18:00'
+      timezone: Asia/Tokyo
+    open-pull-requests-limit: 10
+    groups:
+      remotion:
+        patterns:
+          - remotion
+          - '@remotion/*'
+      development-tools:
+        dependency-type: development
+        exclude-patterns:
+          - remotion
+          - '@remotion/*'
+    ignore:
+      - dependency-name: remotion
+        update-types:
+          - version-update:semver-major
+      - dependency-name: '@remotion/*'
+        update-types:
+          - version-update:semver-major
+    labels:
+      - dependencies
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '18:00'
+      timezone: Asia/Tokyo
+    labels:
+      - dependencies
+      - ci
