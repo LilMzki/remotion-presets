@@ -20,6 +20,9 @@ updates:
           - remotion
           - '@remotion/*'
     ignore:
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
       - dependency-name: remotion
         update-types:
           - version-update:semver-major
