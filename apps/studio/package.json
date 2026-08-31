@@ -10,13 +10,13 @@
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@remotion/cli": "4.0.515",
-    "@remotion/effects": "4.0.515",
-    "@remotion/media": "4.0.515",
-    "@remotion/transitions": "4.0.515",
+    "@remotion/cli": "4.0.518",
+    "@remotion/effects": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/transitions": "4.0.518",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "remotion": "4.0.515",
+    "remotion": "4.0.518",
     "remotion-presets": "0.1.0"
   }
 }
