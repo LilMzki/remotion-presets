@@ -10,9 +10,9 @@
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@remotion/cli": "4.0.515",
+    "@remotion/cli": "4.0.540",
     "@remotion/effects": "4.0.515",
-    "@remotion/media": "4.0.515",
+    "@remotion/media": "4.0.540",
     "@remotion/transitions": "4.0.515",
     "react": "19.2.8",
     "react-dom": "19.2.8",
